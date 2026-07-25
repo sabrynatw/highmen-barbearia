@@ -9,15 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0c0c0d;
-    --bg-alt:#141211;
-    --panel:#19100e;
-    --line:#2c2521;
-    --gold:#c9a24a;
-    --gold-bright:#e9cd82;
-    --cream:#ede7db;
-    --cream-dim:#a89f8f;
-    --wine:#3a1419;
+    --bg:#000000;
+    --bg-alt:#0d1420;
+    --panel:#132537;
+    --line:#2a3138;
+    --gold:#DA7133;
+    --gold-bright:#E89B62;
+    --cream:#F5F1E6;
+    --cream-dim:#A9A9A5;
+    --wine:#AA1D1D;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -29,7 +29,7 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none;}
-  ::selection{background:var(--gold);color:#100c0a;}
+  ::selection{background:var(--gold);color:#000000;}
   :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
 
   h1,h2,h3,.display{
@@ -50,7 +50,7 @@
     position:fixed;top:0;left:0;right:0;z-index:100;
     background:rgba(12,12,13,0.7);
     backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(201,162,74,0.15);
+    border-bottom:1px solid rgba(218,113,51,0.15);
     transition:background .3s;
   }
   nav{
@@ -75,7 +75,7 @@
     font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;
     color:var(--gold-bright);transition:all .25s;white-space:nowrap;
   }
-  .nav-cta:hover{background:var(--gold);color:#100c0a;}
+  .nav-cta:hover{background:var(--gold);color:#000000;}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
   .burger span{width:24px;height:2px;background:var(--cream);}
 
@@ -84,8 +84,8 @@
     min-height:100vh;display:flex;flex-direction:column;justify-content:center;
     position:relative;padding:140px 28px 80px;
     background:
-      radial-gradient(ellipse at 75% 15%, rgba(201,162,74,0.10), transparent 55%),
-      radial-gradient(ellipse at 10% 90%, rgba(58,20,25,0.5), transparent 60%),
+      radial-gradient(ellipse at 75% 15%, rgba(218,113,51,0.10), transparent 55%),
+      radial-gradient(ellipse at 10% 90%, rgba(170,29,29,0.5), transparent 60%),
       var(--bg);
   }
   .hero-inner{max-width:1180px;margin:0 auto;width:100%;position:relative;}
@@ -107,7 +107,7 @@
   }
   .hero-ctas{display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
   .btn-primary{
-    background:var(--gold);color:#100c0a;padding:17px 34px;border-radius:2px;
+    background:var(--gold);color:#000000;padding:17px 34px;border-radius:2px;
     font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
     font-size:0.88rem;display:inline-flex;align-items:center;gap:10px;
     transition:transform .25s, background .25s;
@@ -174,7 +174,7 @@
   .diff-visual{
     aspect-ratio:4/5;border-radius:2px;position:relative;overflow:hidden;
     background:
-      linear-gradient(160deg, #201814 0%, #100c0a 55%, #0c0c0d 100%);
+      linear-gradient(160deg, #132537 0%, #000000 55%, #000000 100%);
     border:1px solid var(--line);
     display:flex;align-items:center;justify-content:center;
   }
@@ -195,12 +195,12 @@
     display:flex;align-items:center;justify-content:center;
   }
   .gallery-tile::before{content:'';position:absolute;inset:0;transition:transform .5s;}
-  .gallery-tile:nth-child(1)::before{background:linear-gradient(135deg,#241a14,#0c0c0d);}
-  .gallery-tile:nth-child(2)::before{background:linear-gradient(135deg,#3a1419,#150e0c);}
-  .gallery-tile:nth-child(3)::before{background:linear-gradient(135deg,#2a2016,#0c0c0d);}
-  .gallery-tile:nth-child(4)::before{background:linear-gradient(135deg,#1a1512,#241a14);}
-  .gallery-tile:nth-child(5)::before{background:linear-gradient(135deg,#150e0c,#3a1419);}
-  .gallery-tile:nth-child(6)::before{background:linear-gradient(135deg,#0c0c0d,#2a2016);}
+  .gallery-tile:nth-child(1)::before{background:linear-gradient(135deg,#132537,#000000);}
+  .gallery-tile:nth-child(2)::before{background:linear-gradient(135deg,#AA1D1D,#3D0F0F);}
+  .gallery-tile:nth-child(3)::before{background:linear-gradient(135deg,#132537,#000000);}
+  .gallery-tile:nth-child(4)::before{background:linear-gradient(135deg,#000000,#132537);}
+  .gallery-tile:nth-child(5)::before{background:linear-gradient(135deg,#3D0F0F,#AA1D1D);}
+  .gallery-tile:nth-child(6)::before{background:linear-gradient(135deg,#000000,#132537);}
   .gallery-tile:hover::before{transform:scale(1.08);}
   .gallery-tile img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;transition:transform .5s;filter:saturate(0.92) contrast(1.05);}
   .gallery-tile:hover img{transform:scale(1.08);}
@@ -270,7 +270,7 @@
     transition:transform .25s;
   }
   .float-wa:hover{transform:scale(1.08);}
-  .float-wa svg{width:28px;height:28px;color:#100c0a;}
+  .float-wa svg{width:28px;height:28px;color:#000000;}
 
   @media (max-width:860px){
     .nav-links, .nav-cta{display:none;}
@@ -386,9 +386,9 @@
     <div class="diff-wrap">
       <div class="diff-visual reveal">
         <svg viewBox="0 0 200 200" fill="none">
-          <circle cx="100" cy="100" r="70" stroke="#c9a24a" stroke-width="1"/>
-          <path d="M60 90 L100 60 L140 90 L120 140 L80 140 Z" stroke="#e9cd82" stroke-width="1.2"/>
-          <circle cx="100" cy="95" r="8" fill="#c9a24a"/>
+          <circle cx="100" cy="100" r="70" stroke="#DA7133" stroke-width="1"/>
+          <path d="M60 90 L100 60 L140 90 L120 140 L80 140 Z" stroke="#E89B62" stroke-width="1.2"/>
+          <circle cx="100" cy="95" r="8" fill="#DA7133"/>
         </svg>
       </div>
       <div class="reveal">
@@ -503,7 +503,7 @@
       </div>
       <div class="booking-panel reveal">
         <div class="badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c9a24a" stroke-width="1.5" width="24" height="24"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.6 22 2 14.4 2 5a2 2 0 0 1 2-2Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#DA7133" stroke-width="1.5" width="24" height="24"><path d="M4 5h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 14l5 2v4a2 2 0 0 1-2 2C9.6 22 2 14.4 2 5a2 2 0 0 1 2-2Z"/></svg>
         </div>
         <h3>Pronto pro seu novo corte?</h3>
         <p>Clique no link abaixo e garanta seu horário — resposta rápida, sem enrolação.</p>
